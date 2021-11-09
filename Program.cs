@@ -1,27 +1,27 @@
-﻿bool keepLooping = true;
-
+﻿bool namerestart;
+while (namerestart = true) 
+{
     Console.WriteLine("Please enter your name!:");
 
     string name = Console.ReadLine();
 
     Console.WriteLine("Oh, so your name is " + name, "?");
-while (true)
-{
-    Console.WriteLine("Y=1/N=2");
 
-    int nameconfirm = int.Parse(Console.ReadLine());
+    Console.WriteLine("y/n");
+    char nameopt = char.Parse(Console.ReadLine());
 
-    switch (nameconfirm)
+    if (nameopt == 'n')
     {
-      case 1:
-            Console.WriteLine(name, " that's a good name");
-            break;
-
-      case 2:
-            
-
-        default:
-            Console.WriteLine("That isn't a valid input");
-            continue;
+        namerestart = true;
     }
-}
+
+    else if (nameopt == 'y')
+    {
+        C   ole.WriteLine("test");
+    }
+
+    else
+    {
+        namerestart = false;
+    }
+ }  
