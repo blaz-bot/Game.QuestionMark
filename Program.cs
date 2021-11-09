@@ -1,27 +1,39 @@
-﻿bool namerestart;
-while (namerestart = true) 
+﻿
+//Name Selection
 {
-    Console.WriteLine("Please enter your name!:");
-
-    string name = Console.ReadLine();
-
-    Console.WriteLine("Oh, so your name is " + name, "?");
-
-    Console.WriteLine("y/n");
-    char nameopt = char.Parse(Console.ReadLine());
-
-    if (nameopt == 'n')
+    bool namerestart;
+    while (namerestart = true)
     {
-        namerestart = true;
-    }
+        Console.WriteLine("Please enter your name!:");
 
-    else if (nameopt == 'y')
-    {
-        Console.WriteLine("test");
-    }
+        string name = Console.ReadLine();
 
-    else
-    {
-        namerestart = false;
+        Thread.Sleep(500);
+        Console.WriteLine("Oh, so your name is " + name + "?");
+
+        Thread.Sleep(500);
+        Console.WriteLine("(y/n)");
+        char nameopt = char.Parse(Console.ReadLine());
+        //Incorrect name input, restart
+        if (nameopt == 'n')
+        {
+            namerestart = true;
+        }
+        //Name is all g
+        else if (nameopt == 'y')
+        {
+            Console.Clear();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Sweet! Nice to meet you " + name, "!");
+            break;
+        }
+        //Invalid y/n
+        else
+        {
+            Thread.Sleep(500);
+            Console.WriteLine("That is not a valid input :(, lets try again?");
+            Thread.Sleep(500);
+        }
     }
- }  
+}
