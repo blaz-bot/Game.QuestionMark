@@ -17,7 +17,7 @@ while (namerestart = true)
 
     else if (nameopt == 'y')
     {
-        C   ole.WriteLine("test");
+        Console.WriteLine("test");
     }
 
     else
